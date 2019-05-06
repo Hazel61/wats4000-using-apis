@@ -2,8 +2,7 @@
   <div class="adjfornoun">
     <form v-on:submit.prevent="findWords">
       <h1>Find an adjective to go with your noun!</h1>
-      <p>
-          Noun to search for: <input type="text" v-model="noun"><button type="submit">Search</button></p>
+      <p>Noun to search for: <input type="text" v-model="noun"><button type="submit">Search</button></p>
     </form>
    
     <ul class="results" v-if='results && results.length > 0'>
@@ -35,8 +34,7 @@ export default {
     return {
       results: null,
       errors: [],
-      phrase: '',
-      rhyme: ''
+      noun: ''
     }
   },
   methods: {
